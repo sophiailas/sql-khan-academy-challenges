@@ -1,0 +1,42 @@
+/** For this project I created a database for a store that sells Mugs. 
+I created a table for 15 mugs sold. I then ordered the items by cheapest price, then found what the cheapest and largest mug was at the store.**/
+
+/** Mug Store
+Ceramic Mug
+Glass Mug
+Travel Mug
+Espresso Cup
+**/
+
+CREATE TABLE mugs (id INTEGER PRIMARY KEY, type TEXT, ounces INTEGER, price NUMERIC, asile INTEGER);
+
+INSERT INTO mugs VALUES (1, "Ceramic", 12, 15.99, 7);
+INSERT INTO mugs VALUES (2, "Ceramic", 16, 20.99, 7);
+INSERT INTO mugs VALUES (3, "Ceramic", 20, 24.99, 7);
+INSERT INTO mugs VALUES (13, "Ceramic", 24, 27.99, 7);
+INSERT INTO mugs VALUES (4, "Glass", 8, 5.99, 8);
+INSERT INTO mugs VALUES (5, "Glass", 12, 9.99, 8);
+INSERT INTO mugs VALUES (6, "GLass", 16, 12.99, 8);
+INSERT INTO mugs VALUES (7, "Glass", 20, 15.99, 8);
+INSERT INTO mugs VALUES (8, "Travel", 12, 11.99, 2);
+INSERT INTO mugs VALUES (9, "Travel", 16, 14.99, 2);
+INSERT INTO mugs VALUES (14, "Travel", 20, 17.99, 2);
+INSERT INTO mugs VALUES (10, "Travel", 24, 20.99, 2);
+INSERT INTO mugs VALUES (11, "Espresso", 2, 2.99, 10);
+INSERT INTO mugs VALUES (12, "Espresso", 3, 3.99, 10);
+INSERT INTO mugs VALUES (15, "Espresso set", 3, 9.99, 10);
+SELECT * FROM mugs ORDER BY price;
+SELECT * FROM mugs ORDER BY asile;
+SELECT sum(price) FROM mugs;
+
+/**
+Whats your largest and cheapest mug?
+**/
+
+SELECT * FROM mugs WHERE ounces > 21 ORDER BY price;
+
+/**
+Our largest and cheapest mug is a 24 ounce Travel Mug priced at 20.99
+**/
+
+
