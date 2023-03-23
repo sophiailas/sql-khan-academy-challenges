@@ -1,0 +1,14 @@
+/** I've created a database of recent TV shows I've watched. 
+The Last of Us
+Fleabag
+Barry
+Severence
+**/
+
+CREATE TABLE tvshows (id INTEGER PRIMARY KEY, name TEXT, rating INTEGER);
+
+INSERT INTO tvshows VALUES (1, "The Last of Us", 10);
+INSERT INTO tvshows VALUES (2, "Fleabag", 10);
+INSERT INTO tvshows VALUES (3, "Barry", 9);
+INSERT INTO tvshows VALUES (4,"Severence", 10);
+SELECT * FROM tvshows;
